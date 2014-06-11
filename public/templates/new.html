@@ -1,0 +1,28 @@
+<h1> Add New Fog or Smog </h1>
+
+
+
+<div class="row">
+  <div class="col-md-6">
+    <p> To add a new picture, simply upload the picture and mark if it's foggy or smoggy, and others will guess! </p>
+
+
+    <div class="form-group">
+      <label for="isSmog"> Fog or Smog? </label>
+      <select class="form-control" ng-options="v.text for v in isSmog">
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="filepath">Smoggy or Foggy File</label>
+      <input type="file" id="filepath">
+      <p class="help-block">Should be a picture of a foggy or smoggy city.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <img ng-src="{{entry.filepath}}"> </img>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-default btn-primary" ng-click="save()">Submit</button>
